@@ -6,23 +6,48 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #3b8d99, #6a8fbd);
+    background: linear-gradient(45deg, #6a8fbd, #3b8d99, #8d6e63);
     color: #fff;
     line-height: 1.6;
+    animation: backgroundMotion 15s infinite linear;
+}
+
+@keyframes backgroundMotion {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 40px 0;
     text-align: center;
     border-radius: 10px;
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-right: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-text {
+    color: #fff;
 }
 
 h1 {
@@ -41,8 +66,8 @@ a {
 }
 
 section {
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 h2 {
@@ -54,14 +79,21 @@ h2 {
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .project {
     width: 30%;
-    background-color: #444;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project h3 {
@@ -80,21 +112,9 @@ h2 {
     text-decoration: none;
 }
 
-img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 15px;
     position: fixed;
