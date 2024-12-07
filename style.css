@@ -48,11 +48,41 @@ section {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #fff;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.project {
+    width: 30%;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.project a {
+    font-size: 1rem;
+    color: #4CAF50;
+    text-decoration: none;
 }
 
 img {
-    width: 250px;
+    width: 200px;
+    height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
