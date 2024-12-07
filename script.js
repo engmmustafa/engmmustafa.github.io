@@ -1,3 +1,4 @@
+// Adding interactivity to the profile image hover
 window.onload = function() {
     const profileImage = document.getElementById('profileImage');
     profileImage.addEventListener('mouseover', function() {
