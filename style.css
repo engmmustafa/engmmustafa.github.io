@@ -1,21 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #7e57c2, #42a5f5, #66bb6a);
+    background-size: 300% 300%;
+    animation: backgroundMotion 10s infinite alternate;
+    color: #fff;
+    margin: 0;
+}
+
+@keyframes backgroundMotion {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.language-toggle {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.language-toggle button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-toggle button:hover {
+    background-color: #45a049;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    text-align: center;
 }
 
 .hero-text {
     position: relative;
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
 .photo-container {
-    width: 150px;  /* Adjust size */
-    height: 150px; /* Adjust size */
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #fff; /* Optional: Add border to make it stand out */
+    border: 5px solid #fff;
     position: relative;
     z-index: 2;
 }
@@ -52,7 +94,7 @@
     justify-content: space-between;
 }
 
-.projects, .skills, .cv-cards {
+.projects, .skills, .cv-cards, .languages-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
