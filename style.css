@@ -1,101 +1,66 @@
-/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Hero Section */
-.hero {
+header.hero {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    padding: 50px 0;
     text-align: center;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
 }
 
-.hero h1 {
-    margin-bottom: 20px;
-    font-size: 2.5em;
+header.hero .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 3px solid #fff;
 }
 
-.contact-info button {
-    background: #FFD700; /* Yellow for solar energy */
-    color: black;
+header.hero .contact-info button {
+    background-color: #fff;
+    color: #333;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.contact-info button:hover {
-    background: #FFA500; /* Orange hover effect */
+header.hero .contact-info button:hover {
+    background-color: #ddd;
 }
 
-/* Main Content */
-.main-content {
+section.experience-projects {
     display: flex;
-    justify-content: space-evenly;
-    padding: 40px 0;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #fff;
 }
 
-.experience, .projects {
+section.experience-projects > div {
     width: 45%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.experience h2, .projects h2 {
-    margin-bottom: 10px;
-}
-
-.experience ul, .projects ul {
-    list-style: none;
-    padding: 0;
-}
-
-.experience li, .projects li {
-    margin: 10px 0;
-}
-
-/* Skills and Languages Section */
-.skills-languages {
+section.skills-languages {
     display: flex;
-    justify-content: space-evenly;
-    padding: 40px 0;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f4f4f4;
 }
 
-.skills, .languages {
+section.skills-languages > div {
     width: 45%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.skills h2, .languages h2 {
-    margin-bottom: 10px;
-}
-
-.skills ul, .languages ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills li, .languages li {
-    margin: 10px 0;
-}
-
-/* Footer */
 footer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    font-size: 0.9em;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
