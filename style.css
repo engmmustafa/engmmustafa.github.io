@@ -3,9 +3,18 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    background: linear-gradient(45deg, #FF8C00, #32CD32); /* New color scheme: Orange and Lime */
+    background: url('DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire page */
     transition: background 1s ease;
 }
+
+/* Other styles for the page */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
 
 .container {
     width: 80%;
