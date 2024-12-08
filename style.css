@@ -1,10 +1,9 @@
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #42a5f5, #66bb6a);
     color: white;
+    background: linear-gradient(45deg, #42a5f5, #66bb6a);
 }
 
 .container {
@@ -13,7 +12,6 @@ body {
     padding: 40px 0;
 }
 
-/* Hero Section */
 .hero {
     background-color: #42a5f5;
     padding: 60px 0;
@@ -32,19 +30,29 @@ body {
     text-decoration: none;
 }
 
-/* About Section */
-.about {
-    background-color: #f1f1f1;
+/* Experience Section */
+.experience {
+    padding: 40px 0;
 }
 
-.about h2 {
+.corner {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
     text-align: center;
-    font-size: 2em;
+}
+
+.corner:hover {
+    transform: scale(1.05);
 }
 
 /* Projects Section */
 .projects {
-    background-color: #ffffff;
+    padding: 40px 0;
+    background-color: #42a5f5;
 }
 
 .project-card {
@@ -59,17 +67,9 @@ body {
     margin-bottom: 10px;
 }
 
-/* Experience Section */
-.experience {
-    background-color: #42a5f5;
-}
-
-.experience p {
-    text-align: center;
-}
-
 /* Skills Section */
 .skills {
+    padding: 40px 0;
     background-color: #f1f1f1;
 }
 
@@ -83,12 +83,30 @@ body {
     margin: 10px;
 }
 
+/* Languages Section */
+.languages {
+    padding: 40px 0;
+    background-color: #66bb6a;
+}
+
+.languages ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.languages li {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
 /* CV Section */
 .cv {
-    background-color: #66bb6a;
+    padding: 40px 0;
+    background-color: #42a5f5;
     text-align: center;
 }
 
+/* Footer */
 footer {
     background-color: #42a5f5;
     text-align: center;
