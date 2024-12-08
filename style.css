@@ -37,24 +37,42 @@ body {
     margin: 20px auto;
 }
 
-.photo-container {
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
+}
+
+.hero-image {
+    position: absolute;
     width: 100%;
-    height: 300px; /* Set height as required */
-    margin-bottom: 20px;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .background-photo, .overlay-photo {
-    position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .overlay-photo {
-    opacity: 0.5; /* Adjust opacity to make it overlay */
+    opacity: 0.4;
+}
+
+.hero-text {
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.contact-info a {
+    display: block;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .corner {
@@ -71,9 +89,10 @@ body {
     transform: scale(1.05);
 }
 
-.right-side {
-    float: right;
-    width: 30%;
+.projects, .skills, .cv-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 footer {
