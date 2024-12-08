@@ -3,9 +3,9 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
-    background-size: cover;
     color: white;
+    background: linear-gradient(to bottom, #2E7D32, #FFD700);
+    background-size: cover;
 }
 
 /* Hero Section */
@@ -20,6 +20,7 @@ body {
     font-size: 2.5em;
 }
 
+/* Profile Photo */
 .photo-container {
     margin: 20px auto;
     width: 150px;
@@ -53,7 +54,7 @@ body {
     background: #FFA500;
 }
 
-/* Main Content */
+/* Experience and Projects Section */
 .experience-projects {
     display: flex;
     justify-content: space-evenly;
@@ -68,7 +69,7 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Skills and Languages */
+/* Skills and Languages Section */
 .skills-languages {
     display: flex;
     justify-content: space-evenly;
