@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    background: linear-gradient(45deg, #4A90E2, #50E3C2);
+    background: linear-gradient(45deg, #FF8C00, #32CD32); /* New color scheme: Orange and Lime */
     transition: background 1s ease;
 }
 
@@ -14,10 +14,9 @@ body {
 }
 
 .hero {
-    background-color: #4A90E2;
+    background-color: #32CD32;
     padding: 60px 0;
     text-align: center;
-    position: relative;
 }
 
 .hero-text h1 {
@@ -25,62 +24,17 @@ body {
     margin-bottom: 20px;
 }
 
-.contact-info a {
-    color: white;
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-/* Experience Section */
-.experience {
-    padding: 40px 0;
-    background-color: #FF6F61;
-}
-
-.corner {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.corner:hover {
-    transform: scale(1.05);
-}
-
-/* Projects Section */
-.projects {
-    padding: 40px 0;
-    background-color: #4A90E2;
-}
-
-.project-card {
-    background-color: #66bb6a;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
-    margin-bottom: 10px;
-}
-
-/* Skills & Languages Section */
+/* Skills & Languages Section in One Row */
 .skills-languages {
-    padding: 40px 0;
-    background-color: #A6D3E1;
     display: flex;
     justify-content: space-between;
+    background-color: #FFD700; /* New section background color */
+    padding: 40px 0;
 }
 
 .skills, .languages {
     width: 48%;
-    background-color: #50E3C2;
+    background-color: #FF6347; /* Tomato color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -95,7 +49,7 @@ body {
     margin: 10px 0;
 }
 
-/* Profile Photo */
+/* Profile Photo in Circular Shape with Border */
 .photo-container {
     width: 150px;
     height: 150px;
@@ -114,19 +68,12 @@ body {
 }
 
 .hero:hover .profile-photo {
-    transform: translateY(-20px); /* Moves photo up on hover */
-}
-
-/* CV Section */
-.cv {
-    padding: 40px 0;
-    background-color: #50E3C2;
-    text-align: center;
+    transform: translateY(-20px); /* Photo moves up on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #50E3C2;
+    background-color: #32CD32;
     text-align: center;
     padding: 20px;
 }
