@@ -6,18 +6,12 @@ body {
     color: white;
     background: url('DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the entire page */
-    transition: background 1s ease;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px 0;
+    background-attachment: fixed; /* Keeps the image still during scrolling */
 }
 
 /* Hero Section */
 .hero {
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
     padding: 60px 0;
     text-align: center;
     position: relative;
@@ -30,63 +24,63 @@ body {
 
 .contact-info a {
     color: white;
-    display: block;
-    margin-top: 10px;
+    display: inline-block;
+    margin: 10px 15px;
     text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Experience Section */
-.experience {
+.contact-info a:hover {
+    background: white;
+    color: black;
+}
+
+/* Profile Photo */
+.photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero:hover .profile-photo {
+    transform: translateY(-20px); /* Moves photo upward on hover */
+}
+
+/* Section Styling */
+section {
     padding: 40px 0;
-    background-color: rgba(255, 111, 97, 0.8); /* Soft red background */
-}
-
-.corner {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
     text-align: center;
-}
-
-.corner:hover {
-    transform: scale(1.05);
-}
-
-/* Projects Section */
-.projects {
-    padding: 40px 0;
-    background-color: rgba(74, 144, 226, 0.8); /* Blue background */
-}
-
-.project-card {
-    background-color: rgba(102, 187, 106, 0.8);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
-    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Soft overlay for content readability */
 }
 
 /* Skills & Languages Section */
 .skills-languages {
-    padding: 40px 0;
-    background-color: rgba(166, 211, 225, 0.8); /* Light blue background */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
 }
 
 .skills, .languages {
-    width: 48%;
-    background-color: rgba(80, 227, 194, 0.8); /* Light green background */
-    padding: 20px;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 .skills ul, .languages ul {
@@ -98,38 +92,16 @@ body {
     margin: 10px 0;
 }
 
-/* Profile Photo */
-.photo-container {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #fff;
-    position: relative;
-}
-
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-}
-
-.hero:hover .profile-photo {
-    transform: translateY(-20px); /* Photo moves up on hover */
-}
-
 /* CV Section */
 .cv {
-    padding: 40px 0;
-    background-color: rgba(80, 227, 194, 0.8);
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    background-color: rgba(80, 227, 194, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
 }
