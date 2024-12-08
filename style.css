@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
+    color: green;
     background: url('https://raw.githubusercontent.com/engmmustafa/engmmustafa.github.io/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
@@ -26,7 +26,7 @@ body {
     margin: 20px auto;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 70%;
     overflow: hidden;
     border: 5px solid white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
