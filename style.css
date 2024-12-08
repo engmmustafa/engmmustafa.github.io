@@ -67,36 +67,29 @@ body {
     margin-bottom: 10px;
 }
 
-/* Skills Section */
-.skills {
+/* Skills & Languages Section */
+.skills-languages {
     padding: 40px 0;
     background-color: #f1f1f1;
-}
-
-.skills ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.skills li {
-    font-size: 1.2em;
-    margin: 10px;
+.skills, .languages {
+    width: 48%;
+    background-color: #42a5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Languages Section */
-.languages {
-    padding: 40px 0;
-    background-color: #66bb6a;
+.skills ul, .languages ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.languages ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.languages li {
-    font-size: 1.2em;
-    margin: 10px;
+.skills li, .languages li {
+    margin: 10px 0;
 }
 
 /* CV Section */
