@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: green;
+    color: black;
     background: url('https://raw.githubusercontent.com/engmmustafa/engmmustafa.github.io/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
@@ -67,7 +67,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Skills and Languages Section */
@@ -82,7 +82,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
