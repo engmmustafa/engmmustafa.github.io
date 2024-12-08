@@ -14,25 +14,9 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-section {
-    padding: 40px 0;
-    transition: background-color 1s ease;
-}
-
-section:nth-child(odd) {
-    background: linear-gradient(45deg, #42a5f5, #66bb6a);
-    animation: sectionBackground 10s infinite alternate;
-}
-
-section:nth-child(even) {
-    background: linear-gradient(45deg, #66bb6a, #42a5f5);
-    animation: sectionBackground 15s infinite alternate;
-}
-
-@keyframes sectionBackground {
-    0% { background: linear-gradient(45deg, #42a5f5, #66bb6a); }
-    50% { background: linear-gradient(45deg, #66bb6a, #42a5f5); }
-    100% { background: linear-gradient(45deg, #42a5f5, #66bb6a); }
+.container {
+    width: 90%;
+    margin: 20px auto;
 }
 
 .hero {
@@ -87,7 +71,7 @@ section:nth-child(even) {
     transform: scale(1.05);
 }
 
-.projects, .skills, .cv-cards, .languages-section {
+.projects, .skills, .cv-cards, .languages-section, .internship-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -98,4 +82,22 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     padding: 15px;
     color: white;
+}
+
+.skills-languages-section .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    padding: 40px 0;
+    transition: background-color 1s ease;
+}
+
+section:nth-child(odd) {
+    background: linear-gradient(45deg, #42a5f5, #66bb6a);
+}
+
+section:nth-child(even) {
+    background: linear-gradient(45deg, #66bb6a, #42a5f5);
 }
