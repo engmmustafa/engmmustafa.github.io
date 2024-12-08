@@ -3,10 +3,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
-    background: url('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg?raw=true') no-repeat center center fixed;
+    color: green;
+    background: url('https://raw.githubusercontent.com/engmmustafa/engmmustafa.github.io/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+
 
 /* Hero Section */
 .hero {
