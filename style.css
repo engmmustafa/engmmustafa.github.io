@@ -71,7 +71,7 @@ body {
     transform: scale(1.05);
 }
 
-.projects, .skills, .cv-cards, .languages-section, .internship-section {
+.projects, .skills-languages-section .row, .cv-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
