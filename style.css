@@ -112,7 +112,7 @@ body {
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
 }
-dh
+
 .hero:hover .profile-photo {
     transform: translateY(-20px); /* Moves photo up on hover */
 }
