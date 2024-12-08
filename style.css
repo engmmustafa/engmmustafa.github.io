@@ -1,16 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3, #6a8fbd);
+    background: linear-gradient(135deg, #7e57c2, #42a5f5, #66bb6a);
     background-size: 300% 300%;
-    animation: backgroundMotion 8s infinite alternate;
+    animation: backgroundMotion 10s infinite alternate;
     color: #fff;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes backgroundMotion {
@@ -18,8 +14,30 @@ body {
     100% { background-position: 100% 50%; }
 }
 
+.language-toggle {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.language-toggle button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-toggle button:hover {
+    background-color: #45a049;
+}
+
 .container {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
@@ -30,6 +48,7 @@ body {
     position: relative;
     width: 200px;
     height: 200px;
+    margin-bottom: 20px;
 }
 
 .background-photo {
@@ -50,25 +69,10 @@ body {
     border: 3px solid #fff;
 }
 
-.projects, .cv-cards, .corner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project, .cv-card, .corner {
-    width: 30%;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
+.header-text {
+    flex: 1;
+    margin: 10px 20px;
     text-align: center;
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.project:hover, .cv-card:hover, .corner:hover {
-    transform: scale(1.05);
 }
 
 footer {
