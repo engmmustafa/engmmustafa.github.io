@@ -3,81 +3,84 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
     background: url('DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: white;
 }
 
 /* Hero Section */
 .hero {
-    background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2.5em;
 }
 
-.contact-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.contact-row a {
-    color: white;
+.contact-info button {
+    background: #FFD700; /* Yellow for solar energy */
+    color: black;
+    border: none;
     padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.2);
+    margin: 5px;
     border-radius: 5px;
-    text-decoration: none;
+    cursor: pointer;
     font-weight: bold;
     transition: 0.3s ease;
 }
 
-.contact-row a:hover {
-    background: #FFD700;
-    color: black;
+.contact-info button:hover {
+    background: #FFA500; /* Orange hover effect */
 }
 
-/* Profile Photo */
-.photo-container {
-    width: 180px;
-    height: 180px;
-    margin: 20px auto;
-    border-radius: 50%;
-    border: 5px solid white;
-    overflow: hidden;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
 }
 
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.experience, .projects {
+    width: 45%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Sections */
-section {
-    padding: 40px 20px;
-    text-align: center;
+.experience h2, .projects h2 {
+    margin-bottom: 10px;
 }
 
-/* Skills and Languages */
+.experience ul, .projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience li, .projects li {
+    margin: 10px 0;
+}
+
+/* Skills and Languages Section */
 .skills-languages {
     display: flex;
-    justify-content: space-around;
-    text-align: left;
+    justify-content: space-evenly;
+    padding: 40px 0;
 }
 
 .skills, .languages {
     width: 45%;
-    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.skills h2, .languages h2 {
+    margin-bottom: 10px;
 }
 
 .skills ul, .languages ul {
@@ -87,33 +90,12 @@ section {
 
 .skills li, .languages li {
     margin: 10px 0;
-    font-size: 1.1em;
-}
-
-/* Experience and Projects */
-.experience-projects {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
-}
-
-.experience, .projects {
-    width: 45%;
-}
-
-.project-card, .corner {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
     text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
     font-size: 0.9em;
-    color: white;
 }
