@@ -51,6 +51,11 @@ body {
     transform: scale(1.05);
 }
 
+.right-side {
+    float: right;
+    width: 30%;
+}
+
 footer {
     text-align: center;
     background: rgba(0, 0, 0, 0.8);
