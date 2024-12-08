@@ -1,19 +1,10 @@
-// Adding interactivity to the profile images hover
-window.onload = function() {
-    const profileImageLeft = document.getElementById('profileImageLeft');
-    const profileImageRight = document.getElementById('profileImageRight');
-
-    profileImageLeft.addEventListener('mouseover', function() {
-        profileImageLeft.style.transform = 'scale(1.1)';
+// Adding interactivity to photo hover
+window.onload = function () {
+    const overlayPhoto = document.querySelector('.overlay-photo');
+    overlayPhoto.addEventListener('mouseover', () => {
+        overlayPhoto.style.transform = 'scale(1.2) translate(-50%, -50%)';
     });
-    profileImageLeft.addEventListener('mouseout', function() {
-        profileImageLeft.style.transform = 'scale(1)';
+    overlayPhoto.addEventListener('mouseout', () => {
+        overlayPhoto.style.transform = 'scale(1) translate(-50%, -50%)';
     });
-
-    profileImageRight.addEventListener('mouseover', function() {
-        profileImageRight.style.transform = 'scale(1.1)';
-    });
-    profileImageRight.addEventListener('mouseout', function() {
-        profileImageRight.style.transform = 'scale(1)';
-    });
-}
+};
