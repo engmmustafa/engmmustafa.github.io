@@ -2,8 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(45deg, #4A90E2, #50E3C2);
     color: white;
-    background: linear-gradient(45deg, #42a5f5, #66bb6a);
 }
 
 .container {
@@ -13,7 +13,7 @@ body {
 }
 
 .hero {
-    background-color: #42a5f5;
+    background-color: #4A90E2;
     padding: 60px 0;
     text-align: center;
 }
@@ -33,6 +33,7 @@ body {
 /* Experience Section */
 .experience {
     padding: 40px 0;
+    background-color: #FF6F61;
 }
 
 .corner {
@@ -52,7 +53,7 @@ body {
 /* Projects Section */
 .projects {
     padding: 40px 0;
-    background-color: #42a5f5;
+    background-color: #4A90E2;
 }
 
 .project-card {
@@ -70,14 +71,14 @@ body {
 /* Skills & Languages Section */
 .skills-languages {
     padding: 40px 0;
-    background-color: #f1f1f1;
+    background-color: #A6D3E1;
     display: flex;
     justify-content: space-between;
 }
 
 .skills, .languages {
     width: 48%;
-    background-color: #42a5f5;
+    background-color: #50E3C2;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -92,16 +93,33 @@ body {
     margin: 10px 0;
 }
 
+/* Profile Photo */
+.photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    position: relative;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* CV Section */
 .cv {
     padding: 40px 0;
-    background-color: #42a5f5;
+    background-color: #50E3C2;
     text-align: center;
 }
 
 /* Footer */
 footer {
-    background-color: #42a5f5;
+    background-color: #50E3C2;
     text-align: center;
     padding: 20px;
 }
