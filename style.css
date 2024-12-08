@@ -89,6 +89,11 @@ body {
     transform: scale(1.05);
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
 .projects, .skills, .cv-cards {
     display: flex;
     flex-wrap: wrap;
