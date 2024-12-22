@@ -22,21 +22,9 @@
             position: relative;
             overflow: hidden;
         }
-        header .hero-text {
-            animation: fadeIn 2s ease-in-out;
-        }
         header .hero-text h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-        }
-        header .gear-animation {
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: url('https://example.com/gear.png') no-repeat center/contain;
-            animation: spin 10s linear infinite;
         }
         .profile-photo {
             width: 150px;
@@ -79,9 +67,6 @@
         .language-switcher button:hover {
             background-color: #0077b6;
         }
-        .language-switcher button {
-            animation: bounce 1.5s infinite alternate;
-        }
         section {
             padding: 2rem 1rem;
             max-width: 1200px;
@@ -90,57 +75,12 @@
         .section-title {
             text-align: center;
             margin-bottom: 1rem;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            animation: fadeInUp 2s ease-in-out;
         }
         footer {
             text-align: center;
             background-color: #0077b6;
             color: white;
             padding: 1rem;
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-5px);
-            }
         }
     </style>
 </head>
@@ -156,11 +96,8 @@
                 <button onclick="window.open('https://www.linkedin.com/in/muhammed-mustafa-5529811b7/', '_blank')">LinkedIn</button>
                 <button onclick="window.open('mailto:muhammed.mustafa9831@gmail.com', '_blank')">Email</button>
                 <button onclick="window.open('tel:+905537706792', '_blank')">Phone</button>
-                <button onclick="window.open('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/MuhammedMustafaResume.pdf', '_blank')">English CV</button>
-                <button onclick="window.open('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/Muhamme%20mustafa%20TR%20CV.pdf', '_blank')">Turkish CV</button>
             </div>
         </div>
-        <div class="gear-animation"></div>
         <div class="language-switcher">
             <button onclick="switchLanguage('en')">EN</button>
             <button onclick="switchLanguage('tr')">TR</button>
@@ -170,52 +107,13 @@
 
     <section>
         <h2 id="experienceTitle" class="section-title">Experience</h2>
-        <div class="grid-container">
-            <div>
-                <p id="experienceContent">Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.</p>
-            </div>
-        </div>
+        <p id="experienceContent">Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.</p>
     </section>
 
     <section>
         <h2 id="projectsTitle" class="section-title">Projects</h2>
-        <div class="grid-container">
-            <div>
-                <h3>Tesla Turbine Design</h3>
-                <p id="project1">Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.</p>
-            </div>
-            <div>
-                <h3>Solar Exhaust Fan System</h3>
-                <p id="project2">Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2 id="skillsTitle" class="section-title">Skills</h2>
-        <div class="grid-container">
-            <div>
-                <ul>
-                    <li>SolidWorks</li>
-                    <li>AutoCAD</li>
-                    <li>ANSYS</li>
-                    <li>PVsyst</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2 id="languagesTitle" class="section-title">Languages</h2>
-        <div class="grid-container">
-            <div>
-                <ul>
-                    <li>Arabic: Native</li>
-                    <li>Turkish: Proficient</li>
-                    <li>English: Advanced</li>
-                </ul>
-            </div>
-        </div>
+        <p id="project1">Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.</p>
+        <p id="project2">Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.</p>
     </section>
 
     <footer id="footer">
@@ -229,27 +127,40 @@
                 headerDesc: "I'm Muhammed Mustafa, a Mechanical Engineering student specializing in solar energy and sustainable solutions.",
                 experienceTitle: "Experience",
                 projectsTitle: "Projects",
-                skillsTitle: "Skills",
-                languagesTitle: "Languages",
-                footer: "&copy; 2024 Muhammed Mustafa | Renewable Energy Enthusiast",
                 experienceContent: "Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.",
                 project1: "Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.",
                 project2: "Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.",
-            },
-            ar: {
-                headerTitle: "مرحبًا بك في ملفي الشخصي",
-                headerDesc: "أنا محمد مصطفى، طالب هندسة ميكانيكية متخصص في الطاقة الشمسية والحلول المستدامة.",
-                experienceTitle: "الخبرة",
-                projectsTitle: "المشاريع",
-                skillsTitle: "المهارات",
-                languagesTitle: "اللغات",
-                footer: "&copy; 2024 محمد مصطفى | شغوف بالطاقة المتجددة",
-                experienceContent: "تشغيل ماكينات CNC والمخارط والمثاقب، والمساعدة في فك وإعادة تركيب محرك حافلة مرسيدس.",
-                project1: "توربين بدون شفرات للطاقة المتجددة. أجريت محاكاة باستخدام ANSYS وتحسين الكفاءة.",
-                project2: "تصميم تهوية بالطاقة الشمسية محسّنة باستخدام PVsyst للحلول المستدامة.",
+                footer: "&copy; 2024 Muhammed Mustafa | Renewable Energy Enthusiast",
             },
             tr: {
                 headerTitle: "Portföyüme Hoş Geldiniz",
                 headerDesc: "Ben Muhammed Mustafa, güneş enerjisi ve sürdürülebilir çözümler konusunda uzmanlaşmış bir Makine Mühendisliği öğrencisiyim.",
                 experienceTitle: "Deneyim",
                 projectsTitle: "Projeler",
+                experienceContent: "CNC makinelerini, torna tezgahlarını ve matkapları çalıştırdı ve bir Mercedes otobüs motorunun sökülmesine yardımcı oldu.",
+                project1: "Yenilenebilir enerji sistemleri için kanatsız türbin. ANSYS simülasyonları gerçekleştirdi ve verimliliği optimize etti.",
+                project2: "Sürdürülebilir bina çözümleri için PVsyst kullanarak optimize edilmiş güneş enerjili havalandırma tasarladı.",
+                footer: "&copy; 2024 Muhammed Mustafa | Yenilenebilir Enerji Meraklısı",
+            },
+            ar: {
+                headerTitle: "مرحبًا بك في ملفي الشخصي",
+                headerDesc: "أنا محمد مصطفى، طالب هندسة ميكانيكية متخصص في الطاقة الشمسية والحلول المستدامة.",
+                experienceTitle: "الخبرة",
+                projectsTitle: "المشاريع",
+                experienceContent: "تشغيل ماكينات CNC والمخارط والمثاقب، والمساعدة في فك وإعادة تركيب محرك حافلة مرسيدس.",
+                project1: "توربين بدون شفرات للطاقة المتجددة. أجريت محاكاة باستخدام ANSYS وتحسين الكفاءة.",
+                project2: "تصميم تهوية بالطاقة الشمسية محسّنة باستخدام PVsyst للحلول المستدامة.",
+                footer: "&copy; 2024 محمد مصطفى | شغوف بالطاقة المتجددة",
+            },
+        };
+
+        function switchLanguage(lang) {
+            const elements = Object.keys(translations[lang]);
+            elements.forEach(key => {
+                const element = document.getElementById(key);
+                if (element) element.innerHTML = translations[lang][key];
+            });
+        }
+    </script>
+</body>
+</html>
