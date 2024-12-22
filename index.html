@@ -3,11 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Muhammed Mustafa, a mechanical engineer passionate about renewable energy and sustainable solutions.">
     <title>Muhammed Mustafa - Mechanical Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        header .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem 0;
+        }
+        .contact-info button {
+            background-color: #00b4d8;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .contact-info button:hover {
+            background-color: #0077b6;
+        }
+        section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        footer {
+            text-align: center;
+            background-color: #0077b6;
+            color: white;
+            padding: 1rem;
+        }
+        .language-switcher {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .language-switcher button {
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #00b4d8;
+            color: white;
+            font-size: 1rem;
+        }
+        .language-switcher button:hover {
+            background-color: #0077b6;
+        }
+    </style>
 </head>
 <body>
-    <header class="hero">
+    <header>
         <div class="hero-text">
             <h1>Welcome to My Portfolio</h1>
             <p>I'm <strong>Muhammed Mustafa</strong>, a Mechanical Engineering student specializing in solar energy and sustainable solutions.</p>
@@ -24,45 +102,64 @@
         </div>
     </header>
 
-    <section class="experience-projects">
-        <div class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>Intern at Gaziantep University (2021): Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.</li>
-            </ul>
-        </div>
-        <div class="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Tesla Turbine Design: Bladeless turbine for renewable energy systems. Conducted ANSYS simulations.</li>
-                <li>Solar Exhaust Fan: Solar-powered ventilation optimized using PVsyst.</li>
-            </ul>
+    <section>
+        <h2 class="section-title">Experience</h2>
+        <div class="grid-container">
+            <div>
+                <h3>Internship at Gaziantep University (2021)</h3>
+                <p>Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.</p>
+            </div>
         </div>
     </section>
 
-    <section class="skills-languages">
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>SolidWorks</li>
-                <li>AutoCAD</li>
-                <li>ANSYS</li>
-                <li>PVsyst</li>
-            </ul>
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <div class="grid-container">
+            <div>
+                <h3>Tesla Turbine Design</h3>
+                <p>Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.</p>
+            </div>
+            <div>
+                <h3>Solar Exhaust Fan System</h3>
+                <p>Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.</p>
+            </div>
         </div>
-        <div class="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>Arabic: Native</li>
-                <li>Turkish: Proficient</li>
-                <li>English: Advanced</li>
-            </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="grid-container">
+            <div>
+                <ul>
+                    <li>SolidWorks</li>
+                    <li>AutoCAD</li>
+                    <li>ANSYS</li>
+                    <li>PVsyst</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Languages</h2>
+        <div class="grid-container">
+            <div>
+                <ul>
+                    <li>Arabic: Native</li>
+                    <li>Turkish: Proficient</li>
+                    <li>English: Advanced</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Muhammed Mustafa | Renewable Energy Enthusiast</p>
+        <div class="language-switcher">
+            <button onclick="window.location.href='index-en.html'">English</button>
+            <button onclick="window.location.href='index-tr.html'">Turkish</button>
+            <button onclick="window.location.href='index-ar.html'">Arabic</button>
+        </div>
     </footer>
 </body>
 </html>
- 
