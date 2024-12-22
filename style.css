@@ -1,170 +1,160 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Main Container */
-.container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden;
 }
 
 /* Header Section */
 header {
-  text-align: center;
-  background-color: #1a237e;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-  font-size: 2.5em;
+header .hero-text {
+    animation: fadeIn 2s ease-in-out;
 }
 
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+header .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Profile Section */
-.profile {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+header .gear-animation {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: url('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center/contain;
+    animation: spin 10s linear infinite;
 }
 
-.profile .photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem 0;
 }
 
-.profile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Contact Info Buttons */
+.contact-info button {
+    background-color: #00b4d8;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.profile .info {
-  flex: 1;
-  margin-left: 20px;
+.contact-info button:hover {
+    background-color: #0077b6;
+    transform: scale(1.1);
 }
 
-.profile .info h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+/* Language Switcher */
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
 }
 
-.profile .info p {
-  font-size: 1.2em;
+.language-switcher button {
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #00b4d8;
+    color: white;
+    font-size: 0.8rem;
+    transition: background 0.3s;
 }
 
-.contact {
-  margin-top: 20px;
+.language-switcher button:hover {
+    background-color: #0077b6;
 }
 
-.contact div {
-  margin-bottom: 10px;
+.language-switcher button {
+    animation: bounce 1.5s infinite alternate;
 }
 
-.contact i {
-  color: #1a237e;
-  margin-right: 10px;
-}
-
-.contact a {
-  color: #333;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  color: #ffb300;
-}
-
-/* Sections: Work, Education, Skills */
+/* Sections */
 section {
-  margin-bottom: 30px;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
-section h3 {
-  color: #1a237e;
-  font-size: 1.5em;
-  margin-bottom: 15px;
+.section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
-section h4 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-section ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-section ul li {
-  background-color: #eeeeee;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-section ul li:hover {
-  background-color: #d1c4e9;
-}
-
-section ul li .job-title {
-  font-weight: bold;
-  color: #1a237e;
-}
-
-section ul li .job-desc {
-  color: #555;
-}
-
-.skills ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.skills ul li {
-  margin-bottom: 15px;
-}
-
-.skills .progress-bar {
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  height: 8px;
-  width: 100%;
-  margin-top: 5px;
-}
-
-.skills .progress-bar div {
-  height: 100%;
-  background-color: #ffb300;
-  border-radius: 5px;
+/* Grid Layout for Experience and Projects */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #1a237e;
-  color: white;
-  margin-top: 30px;
-  border-radius: 10px;
+    text-align: center;
+    background-color: #0077b6;
+    color: white;
+    padding: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
 }
