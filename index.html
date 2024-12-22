@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Muhammed Mustafa, a mechanical engineer passionate about renewable energy and sustainable solutions.">
     <title>Muhammed Mustafa - Mechanical Engineer</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,6 +79,9 @@
         .language-switcher button:hover {
             background-color: #0077b6;
         }
+        .language-switcher button {
+            animation: bounce 1.5s infinite alternate;
+        }
         section {
             padding: 2rem 1rem;
             max-width: 1200px;
@@ -131,13 +133,22 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="hero-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm <strong>Muhammed Mustafa</strong>, a Mechanical Engineering student specializing in solar energy and sustainable solutions.</p>
+            <h1 id="headerTitle">Welcome to My Portfolio</h1>
+            <p id="headerDesc">I'm Muhammed Mustafa, a Mechanical Engineering student specializing in solar energy and sustainable solutions.</p>
             <div class="photo-container">
                 <img src="https://github.com/engmmustafa/engmmustafa.github.io/blob/master/WhatsApp%20Image%202024-12-08%20at%2002.30.58_df4e53b9.jpg?raw=true" alt="Muhammed Mustafa" class="profile-photo">
             </div>
@@ -151,38 +162,37 @@
         </div>
         <div class="gear-animation"></div>
         <div class="language-switcher">
-            <button onclick="window.location.href='index-en.html'">EN</button>
-            <button onclick="window.location.href='index-tr.html'">TR</button>
-            <button onclick="window.location.href='index-ar.html'">AR</button>
+            <button onclick="switchLanguage('en')">EN</button>
+            <button onclick="switchLanguage('tr')">TR</button>
+            <button onclick="switchLanguage('ar')">AR</button>
         </div>
     </header>
 
     <section>
-        <h2 class="section-title">Experience</h2>
+        <h2 id="experienceTitle" class="section-title">Experience</h2>
         <div class="grid-container">
             <div>
-                <h3>Internship at Gaziantep University (2021)</h3>
-                <p>Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.</p>
+                <p id="experienceContent">Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2 class="section-title">Projects</h2>
+        <h2 id="projectsTitle" class="section-title">Projects</h2>
         <div class="grid-container">
             <div>
                 <h3>Tesla Turbine Design</h3>
-                <p>Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.</p>
+                <p id="project1">Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.</p>
             </div>
             <div>
                 <h3>Solar Exhaust Fan System</h3>
-                <p>Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.</p>
+                <p id="project2">Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2 class="section-title">Skills</h2>
+        <h2 id="skillsTitle" class="section-title">Skills</h2>
         <div class="grid-container">
             <div>
                 <ul>
@@ -196,7 +206,7 @@
     </section>
 
     <section>
-        <h2 class="section-title">Languages</h2>
+        <h2 id="languagesTitle" class="section-title">Languages</h2>
         <div class="grid-container">
             <div>
                 <ul>
@@ -208,8 +218,41 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 Muhammed Mustafa | Renewable Energy Enthusiast</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        const translations = {
+            en: {
+                headerTitle: "Welcome to My Portfolio",
+                headerDesc: "I'm Muhammed Mustafa, a Mechanical Engineering student specializing in solar energy and sustainable solutions.",
+                experienceTitle: "Experience",
+                projectsTitle: "Projects",
+                skillsTitle: "Skills",
+                languagesTitle: "Languages",
+                footer: "&copy; 2024 Muhammed Mustafa | Renewable Energy Enthusiast",
+                experienceContent: "Operated CNC machines, lathes, and drills, and assisted with a Mercedes bus engine disassembly.",
+                project1: "Bladeless turbine for renewable energy systems. Conducted ANSYS simulations and optimized efficiency.",
+                project2: "Designed solar-powered ventilation optimized using PVsyst for sustainable building solutions.",
+            },
+            ar: {
+                headerTitle: "مرحبًا بك في ملفي الشخصي",
+                headerDesc: "أنا محمد مصطفى، طالب هندسة ميكانيكية متخصص في الطاقة الشمسية والحلول المستدامة.",
+                experienceTitle: "الخبرة",
+                projectsTitle: "المشاريع",
+                skillsTitle: "المهارات",
+                languagesTitle: "اللغات",
+                footer: "&copy; 2024 محمد مصطفى | شغوف بالطاقة المتجددة",
+                experienceContent: "تشغيل ماكينات CNC والمخارط والمثاقب، والمساعدة في فك وإعادة تركيب محرك حافلة مرسيدس.",
+                project1: "توربين بدون شفرات للطاقة المتجددة. أجريت محاكاة باستخدام ANSYS وتحسين الكفاءة.",
+                project2: "تصميم نظام تهوية يعمل بالطاقة الشمسية محسن باستخدام PVsyst للمباني المستدامة.",
+            },
+            tr: {
+                headerTitle: "Portföyüme Hoş Geldiniz",
+                headerDesc: "Ben Muhammed Mustafa, güneş enerjisi ve sürdürülebilir çözümler konusunda uzmanlaşmış bir Makine Mühendisliği öğrencisiyim.",
+                experienceTitle: "Deneyim",
+                projectsTitle: "Projeler",
+                skillsTitle: "Beceriler",
+                languagesTitle: "Diller",
+                footer: "&copy; 2024 Muhammed Mustafa | Yenilenebilir Enerji
