@@ -1,94 +1,160 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: black;
-    background: url('https://raw.githubusercontent.com/engmmustafa/engmmustafa.github.io/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden;
 }
 
-/* Hero Section */
-.hero {
+/* Header Section */
+header {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
     text-align: center;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero h1 {
-    margin-bottom: 20px;
-    font-size: 2.5em;
+header .hero-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+header .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header .gear-animation {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: url('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat center/contain;
+    animation: spin 10s linear infinite;
 }
 
 /* Profile Photo */
-.photo-container {
-    margin: 20px auto;
+.profile-photo {
     width: 150px;
     height: 150px;
-    border-radius: 100%;
-    overflow: hidden;
-    border: 5px solid white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 1rem 0;
 }
 
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Contact Info */
+/* Contact Info Buttons */
 .contact-info button {
-    background: #FFD700;
-    color: black;
+    background-color: #00b4d8;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s ease;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .contact-info button:hover {
-    background: #FFA500;
+    background-color: #0077b6;
+    transform: scale(1.1);
 }
 
-/* Experience and Projects Section */
-.experience-projects {
+/* Language Switcher */
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
-    justify-content: space-evenly;
-    padding: 60px 0;
+    gap: 5px;
 }
 
-.experience, .projects {
-    width: 45%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
+.language-switcher button {
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #00b4d8;
+    color: white;
+    font-size: 0.8rem;
+    transition: background 0.3s;
 }
 
-/* Skills and Languages Section */
-.skills-languages {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 60px 0;
+.language-switcher button:hover {
+    background-color: #0077b6;
 }
 
-.skills, .languages {
-    width: 45%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
+.language-switcher button {
+    animation: bounce 1.5s infinite alternate;
+}
+
+/* Sections */
+section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Grid Layout for Experience and Projects */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    font-size: 0.9em;
+    background-color: #0077b6;
+    color: white;
+    padding: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
 }
