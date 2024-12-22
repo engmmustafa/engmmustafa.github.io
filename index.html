@@ -13,16 +13,31 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            overflow-x: hidden;
         }
         header {
             background: linear-gradient(to right, #0077b6, #00b4d8);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header .hero-text {
+            animation: fadeIn 2s ease-in-out;
         }
         header .hero-text h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+        }
+        header .gear-animation {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: url('https://example.com/gear.png') no-repeat center/contain;
+            animation: spin 10s linear infinite;
         }
         .profile-photo {
             width: 150px;
@@ -39,9 +54,30 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
         .contact-info button:hover {
+            background-color: #0077b6;
+            transform: scale(1.1);
+        }
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        .language-switcher button {
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #00b4d8;
+            color: white;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+        .language-switcher button:hover {
             background-color: #0077b6;
         }
         section {
@@ -52,11 +88,13 @@
         .section-title {
             text-align: center;
             margin-bottom: 1rem;
+            animation: fadeInUp 1.5s ease-in-out;
         }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
+            animation: fadeInUp 2s ease-in-out;
         }
         footer {
             text-align: center;
@@ -64,23 +102,34 @@
             color: white;
             padding: 1rem;
         }
-        .language-switcher {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
-        .language-switcher button {
-            margin: 0 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            background-color: #00b4d8;
-            color: white;
-            font-size: 1rem;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-        .language-switcher button:hover {
-            background-color: #0077b6;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -99,6 +148,12 @@
                 <button onclick="window.open('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/MuhammedMustafaResume.pdf', '_blank')">English CV</button>
                 <button onclick="window.open('https://github.com/engmmustafa/engmmustafa.github.io/blob/master/Muhamme%20mustafa%20TR%20CV.pdf', '_blank')">Turkish CV</button>
             </div>
+        </div>
+        <div class="gear-animation"></div>
+        <div class="language-switcher">
+            <button onclick="window.location.href='index-en.html'">EN</button>
+            <button onclick="window.location.href='index-tr.html'">TR</button>
+            <button onclick="window.location.href='index-ar.html'">AR</button>
         </div>
     </header>
 
@@ -155,11 +210,6 @@
 
     <footer>
         <p>&copy; 2024 Muhammed Mustafa | Renewable Energy Enthusiast</p>
-        <div class="language-switcher">
-            <button onclick="window.location.href='index-en.html'">English</button>
-            <button onclick="window.location.href='index-tr.html'">Turkish</button>
-            <button onclick="window.location.href='index-ar.html'">Arabic</button>
-        </div>
     </footer>
 </body>
 </html>
